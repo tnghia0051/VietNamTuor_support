@@ -57,12 +57,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public void initView(){
+  /*  public void initView(){
         RecyclerView recyclerView = (RecyclerView)findViewById(R.id.RecyclerView_Place );
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
         ArrayList<DataMain> arrayList = new ArrayList<>();
         arrayList.add(new DataMain());
-    }
+    }*/
 }
