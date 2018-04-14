@@ -14,42 +14,18 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnAddPlace, btnAddservice, btnSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user);
         btnAddPlace = findViewById(R.id.btnAddPlace);
-        btnAddservice = findViewById(R.id.btnAddService);
-        btnSearch = findViewById(R.id.btnAdvancedSearch);
-
-        btnAddPlace.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Activity_addlocation.class);
-                startActivity(intent);
-            }
+        setContentView(R.layout.activity_main);
 
 
-        });
-        btnAddservice.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent2 = new Intent(MainActivity.this, Activity_addservice.class);
-                startActivity(intent2);
-            }
-        });
-        btnSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent3 = new Intent(MainActivity.this, Activity_search.class);
-                startActivity(intent3);
-            }
-        });
+        menuBotNavBar(this, 0);
     }
 
-    public static void menuBotNavBar(final Activity activity,int i) {
+    public static void menuBotNavBar(final Activity activity, int i) {
         BottomNavigationView bottomNavigationView = activity.findViewById(R.id.bottomNavView_Bar);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
 
