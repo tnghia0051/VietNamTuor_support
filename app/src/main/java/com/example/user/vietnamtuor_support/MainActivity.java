@@ -13,17 +13,17 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnAddlocation, btnAddservice, btnSearch;
+    Button btnAddPlace, btnAddservice, btnSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
-        btnAddlocation = findViewById(R.id.btnAddPlace);
+        btnAddPlace = findViewById(R.id.btnAddPlace);
         btnAddservice = findViewById(R.id.btnAddService);
         btnSearch = findViewById(R.id.btnAdvancedSearch);
 
-        btnAddlocation.setOnClickListener(new View.OnClickListener() {
+        btnAddPlace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Activity_addlocation.class);
