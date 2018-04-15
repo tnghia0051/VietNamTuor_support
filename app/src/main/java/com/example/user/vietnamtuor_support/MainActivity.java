@@ -1,15 +1,11 @@
 package com.example.user.vietnamtuor_support;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
@@ -27,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initView();
+
+
         menuBotNavBar(this, 0);
     }
 
@@ -60,25 +57,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public void initView(){
+  /*  public void initView(){
         RecyclerView recyclerView = (RecyclerView)findViewById(R.id.RecyclerView_Place );
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
-        //DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this, linearLayoutManager.getOrientation());
-        //recyclerView.addItemDecoration(dividerItemDecoration);
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),DividerItemDecoration.VERTICAL);
-        Drawable drawable = ContextCompat.getDrawable(getApplicationContext(),R.drawable.custom_divider);
-        dividerItemDecoration.setDrawable(drawable);
-        recyclerView.addItemDecoration(dividerItemDecoration);
         ArrayList<DataMain> arrayList = new ArrayList<>();
-        arrayList.add(new DataMain(R.drawable.ninh_kieu, "Khách sạn Ninh Kiều"));
-        arrayList.add(new DataMain(R.drawable.ninh_kieu, "Khách sạn Vạn Xuân"));
-        arrayList.add(new DataMain(R.drawable.ninh_kieu, "Cơm tấm bà bảy"));
-        arrayList.add(new DataMain(R.drawable.ninh_kieu, "Khách sạn Ninh Kiều"));
-        arrayList.add(new DataMain(R.drawable.ninh_kieu, "Khách sạn Ninh Kiều"));
-        arrayList.add(new DataMain(R.drawable.ninh_kieu, "Khách sạn Ninh Kiều"));
-        AdapterMain adapterMain = new AdapterMain(arrayList,getApplicationContext());
-        recyclerView.setAdapter(adapterMain);
-    }
+        arrayList.add(new DataMain());
+    }*/
 }

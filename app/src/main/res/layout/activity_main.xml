@@ -153,22 +153,20 @@
                     android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
             </LinearLayout>
 
-           <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:background="@color/tbEat"
-                android:visibility="invisible"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
-                android:background="@color/tbHotel"
-                android:visibility="invisible"/>
+                android:background="@color/tbEat" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@color/tbHotel" />
 
 
         </LinearLayout>
