@@ -91,7 +91,5 @@ public class Activity_Login extends AppCompatActivity {
                 }
             }
         });
-
-        menuBotNavBar(this, 3);
     }
 }
