@@ -82,6 +82,8 @@ public class Activity_Login extends AppCompatActivity {
                             }
 
                             sessionManager.createLoginSession(userId + "", userName, userType, avatar);
+                            Intent i = new Intent(Activity_Login.this, MainActivity.class);
+                            startActivity(i);
                         }
                     } catch (JSONException | ExecutionException | InterruptedException e) {
                         e.printStackTrace();
