@@ -7,7 +7,7 @@
 
     <item
         android:id="@+id/ic_phancong"
-        android:title="Phân công công việc"
+        android:title="Phân công"
         android:icon="@drawable/ic_schedule_2" />
 
     <item
