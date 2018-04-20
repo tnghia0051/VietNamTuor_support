@@ -1,7 +1,10 @@
 package com.example.user.vietnamtuor_support;
 
+import android.app.Service;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.view.menu.MenuView;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.lang.reflect.Array;
+import java.security.Provider;
 import java.util.ArrayList;
 
 /**
@@ -19,6 +23,8 @@ import java.util.ArrayList;
 public class AdapterMain extends RecyclerView.Adapter<AdapterMain.ViewHolder> {
     ArrayList<DataMain> dataMains;
     Context context;
+    ArrayList<Service> services;
+    ItemClickListener itemClickListener;
 
     public AdapterMain(ArrayList<DataMain> dataMains, Context context){
         this.dataMains = dataMains;
@@ -33,9 +39,24 @@ public class AdapterMain extends RecyclerView.Adapter<AdapterMain.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        Service service = services.get(position);
         holder.txtName.setText(dataMains.get(position).getName());
         holder.imgMain.setImageResource(dataMains.get(position).getImage());
+        holder.cardView.setTag(dataMains.get(position).getId());
+
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent iEatInfo = new Intent(context, Activity_serviceinfo.class);
+                iEatInfo.putExtra("id", (int) view.getTag());
+                iEatInfo.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(iEatInfo);
+            }
+        });
+
     }
+
+
 
     @Override
     public int getItemCount() {
@@ -45,6 +66,7 @@ public class AdapterMain extends RecyclerView.Adapter<AdapterMain.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView txtName;
         ImageView imgMain;
+        CardView cardView;
         public ViewHolder(View itemView) {
             super(itemView);
             txtName = (TextView)itemView.findViewById(R.id.txtMainName);

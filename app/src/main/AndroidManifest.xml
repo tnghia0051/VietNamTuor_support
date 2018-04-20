@@ -9,20 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity_Login">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".Activity_Login" />
         <activity android:name=".Activity_addlocation" />
         <activity android:name=".Activity_addservice" />
         <activity android:name=".Activity_search" />
         <activity android:name=".Activity_schedule" />
         <activity android:name=".Activity_notification"/>
-        <activity android:name=".Activity_user"/>
+        <activity android:name=".Activity_user" />
+        <activity android:name=".Activity_serviceinfo"/>
     </application>
 
 </manifest>

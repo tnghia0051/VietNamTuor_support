@@ -5,6 +5,7 @@ package com.example.user.vietnamtuor_support;
  */
 
 public class DataMain {
+    private int id;
     private int image;
     private String name;
 
@@ -27,5 +28,9 @@ public class DataMain {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getId() {
+        return id;
     }
 }
