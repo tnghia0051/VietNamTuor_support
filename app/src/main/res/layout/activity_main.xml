@@ -20,11 +20,6 @@
             android:background="@color/bgToolbar"
             app:layout_collapseMode="pin">
 
-            <ImageView
-                android:layout_width="46dp"
-                android:layout_height="match_parent"
-                android:background="@null" />
-
             <TextView
                 android:id="@+id/toolbarTitle"
                 android:layout_width="match_parent"
