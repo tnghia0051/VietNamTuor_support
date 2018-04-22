@@ -13,6 +13,6 @@ public class Activity_serviceinfo   extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_addservice);
+        setContentView(R.layout.activity_serviceinfo);
     }
 }
