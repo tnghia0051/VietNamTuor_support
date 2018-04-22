@@ -24,6 +24,6 @@
         <activity android:name=".Activity_notification"/>
         <activity android:name=".Activity_user" />
         <activity android:name=".Activity_serviceinfo"/>
+        <activity android:name=".Activity_scheduleExist"/>
     </application>
-
 </manifest>
