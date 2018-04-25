@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 public class Config {
 
-    public static final String URL_HOST = "http://192.168.1.63/doan3_canthotour/public/";
+    public static final String URL_HOST = "http://192.168.1.17:8888/doan3_canthotour/public/";
     public static final String URL_LOGIN = "login";
     public static final String FOLDER = "/vietnamtour";
     public static final String NULL = "null";

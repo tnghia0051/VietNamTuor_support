@@ -31,7 +31,7 @@ public class Activity_schedule extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
         initView();
-        menuBotNavBar(this, 2);
+        menuBotNavBar(this, 1);
     }
 
     public void initView(){
