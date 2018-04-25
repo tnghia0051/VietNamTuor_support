@@ -35,6 +35,7 @@ public  class AdapterSchedule extends RecyclerView.Adapter<AdapterSchedule.ViewH
         holder.txtUser.setText(dataSchedules.get(position).getUser());
         holder.txtDate.setText(dataSchedules.get(position).getDate());
         holder.imgMain.setImageResource(dataSchedules.get(position).getImage());
+
     }
 
     @Override

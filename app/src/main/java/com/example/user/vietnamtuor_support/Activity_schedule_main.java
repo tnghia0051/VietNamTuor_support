@@ -1,9 +1,9 @@
 package com.example.user.vietnamtuor_support;
 
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,18 +12,21 @@ import java.util.ArrayList;
 
 import static com.example.user.vietnamtuor_support.MainActivity.menuBotNavBar;
 
-public class Activity_schedule extends AppCompatActivity {
+/**
+ * Created by User on 25/04/2018.
+ */
 
+public class Activity_schedule_main extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
-        initView();
+        //initView();
         menuBotNavBar(this, 2);
     }
 
     public void initView(){
-        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.RecyclerView_ScheduleList);
+        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.RecyclerView_ExistSchedule);
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -39,5 +42,4 @@ public class Activity_schedule extends AppCompatActivity {
         AdapterSchedule adapterSchedule = new AdapterSchedule(arrayList,getApplicationContext());
         recyclerView.setAdapter(adapterSchedule);
     }
-
 }

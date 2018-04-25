@@ -6,6 +6,7 @@ package com.example.user.vietnamtuor_support;
 
 
 public class DataSchedule {
+        private int id;
         private int image;
         private String name;
         private String user;
@@ -16,6 +17,7 @@ public class DataSchedule {
             this.name = name;
             this.user = user;
             this.date = date;
+            this.id = id;
         }
 
         public int getImage() {
@@ -40,6 +42,14 @@ public class DataSchedule {
 
         public void setDate(String name) {
         this.date = date;
+    }
+
+        public int getId() {
+        return id;
+    }
+
+        public void setId(int id) {
+        this.id = id;
     }
 
 
