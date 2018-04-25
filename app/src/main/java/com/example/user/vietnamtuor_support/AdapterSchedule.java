@@ -33,6 +33,7 @@ public  class AdapterSchedule extends RecyclerView.Adapter<AdapterSchedule.ViewH
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.txtName.setText(dataSchedules.get(position).getName());
         holder.txtUser.setText(dataSchedules.get(position).getUser());
+        holder.txtDate.setText(dataSchedules.get(position).getDate());
         holder.imgMain.setImageResource(dataSchedules.get(position).getImage());
     }
 
@@ -43,13 +44,15 @@ public  class AdapterSchedule extends RecyclerView.Adapter<AdapterSchedule.ViewH
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView txtName;
+        TextView txtDate;
         TextView txtUser;
         ImageView imgMain;
         public ViewHolder(View itemView) {
             super(itemView);
             imgMain = (ImageView)itemView.findViewById(R.id.imageScheduleType);
-            txtName = (TextView)itemView.findViewById(R.id.textViewScheduleDate);
+            txtName = (TextView)itemView.findViewById(R.id.textViewScheduleContent);
             txtUser = (TextView)itemView.findViewById(R.id.textViewUserRequest);
+            txtDate = (TextView)itemView.findViewById(R.id.textViewScheduleDate);
         }
     }
 }

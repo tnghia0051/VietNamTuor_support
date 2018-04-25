@@ -9,11 +9,13 @@ public class DataSchedule {
         private int image;
         private String name;
         private String user;
+        private String date;
 
-        public DataSchedule(int image, String name, String user) {
+        public DataSchedule(int image, String name, String user, String date) {
             this.image = image;
             this.name = name;
             this.user = user;
+            this.date = date;
         }
 
         public int getImage() {
@@ -32,7 +34,16 @@ public class DataSchedule {
             this.name = name;
         }
 
-        public String getUser() {
+        public String getDate() {
+        return date;
+    }
+
+        public void setDate(String name) {
+        this.date = date;
+    }
+
+
+    public String getUser() {
             return user;
         }
 

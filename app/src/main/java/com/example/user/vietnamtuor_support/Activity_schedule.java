@@ -18,7 +18,7 @@ public class Activity_schedule extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
-
+        initView();
         menuBotNavBar(this, 1);
     }
 
@@ -34,8 +34,8 @@ public class Activity_schedule extends AppCompatActivity {
         dividerItemDecoration.setDrawable(drawable);
         recyclerView.addItemDecoration(dividerItemDecoration);
         ArrayList<DataSchedule> arrayList = new ArrayList<>();
-        arrayList.add(new DataSchedule(R.drawable.cantho_map, "Khu vực 5, P.Châu Văn Liêm", "Admin"));
-        arrayList.add(new DataSchedule(R.drawable.cantho_map, "Khu vực 4, P.Châu Văn Liêm", "Admin"));
+        arrayList.add(new DataSchedule(R.drawable.cantho_map, "Khu vực 5, P.Châu Văn Liêm", "Admin", "1/1/2018 - 2/1/2018"));
+        arrayList.add(new DataSchedule(R.drawable.cantho_map, "Khu vực 4, P.Châu Văn Liêm", "Admin", "1/1/2018 - 2/1/2018"));
         AdapterSchedule adapterSchedule = new AdapterSchedule(arrayList,getApplicationContext());
         recyclerView.setAdapter(adapterSchedule);
     }
