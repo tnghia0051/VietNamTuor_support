@@ -37,7 +37,7 @@ public class DataSchedule {
         return date;
     }
 
-    public void setDate(String name) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -48,7 +48,6 @@ public class DataSchedule {
     public void setId(int id) {
         this.id = id;
     }
-
 
     public String getUser() {
         return user;

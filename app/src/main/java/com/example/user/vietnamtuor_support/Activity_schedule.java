@@ -26,65 +26,6 @@ import static com.example.user.vietnamtuor_support.MainActivity.menuBotNavBar;
 
 public class Activity_schedule extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_schedule);
-        initView();
-        menuBotNavBar(this, 1);
-    }
-
-    public void initView(){
-        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.RecyclerView_ScheduleList);
-        recyclerView.setHasFixedSize(true);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(linearLayoutManager);
-        //DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this, linearLayoutManager.getOrientation());
-        //recyclerView.addItemDecoration(dividerItemDecoration);
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),DividerItemDecoration.VERTICAL);
-        Drawable drawable = ContextCompat.getDrawable(getApplicationContext(),R.drawable.custom_divider);
-        dividerItemDecoration.setDrawable(drawable);
-        recyclerView.addItemDecoration(dividerItemDecoration);
-        ArrayList<DataSchedule> arrayList = getNearLocationList(Config.URL_GET_TASK_LIST + "/" + userId);
-        AdapterSchedule adapterSchedule = new AdapterSchedule(arrayList,getApplicationContext());
-        recyclerView.setAdapter(adapterSchedule);
-    }
-    public ArrayList<DataSchedule> getNearLocationList(String url) {
-
-        ArrayList<String> arrayList;
-        ArrayList<DataSchedule> services = new ArrayList<>();
-
-        try {
-            JSONArray jsonArray = new JSONArray(new HttpRequestAdapter.httpGet().execute(Config.URL_HOST+url).get());
-
-                for (int i = 0; i < jsonArray.length(); i += 2) {
-
-                    DataSchedule dataSchedule = new DataSchedule();
-                    JSONObject jsonObjectData = jsonArray.getJSONObject(i);
-
-
-                    arrayList = parseJson(jsonObjectData, Config.GET_KEY_JSON_TASK_LIST);
-
-                    //Set hình ảnh
-//                    dataSchedule.setImage(setImage(Config.URL_HOST + Config.URL_GET_THUMB + arrayList.get(3),
-//                            arrayList.get(2), arrayList.get(3)));
-                    //Set mã
-                    dataSchedule.setId(Integer.parseInt(arrayList.get(0)));
-                    //Set ngày giao việc
-                    dataSchedule.setDate(arrayList.get(1));
-                    // set tên công việc
-                    dataSchedule.setName(arrayList.get(2));
-                    // set người giao việc
-                    dataSchedule.setUser(arrayList.get(3));
-
-                    services.add(dataSchedule);
-                }
-        } catch (JSONException | InterruptedException | ExecutionException e) {
-            e.printStackTrace();
-        }
-
-        return services;
-    }
     public static Bitmap setImage(String url, String folderName, String fileName) {
         Bitmap bitmap = null;
         // nếu có trả về tên hình + id hình để đặt tên cho file + folder
@@ -111,5 +52,64 @@ public class Activity_schedule extends AppCompatActivity {
             }
         }
         return bitmap;
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_schedule);
+        initView();
+        menuBotNavBar(this, 1);
+    }
+
+    public void initView() {
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.RecyclerView_ScheduleList);
+        recyclerView.setHasFixedSize(true);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
+        Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.custom_divider);
+        dividerItemDecoration.setDrawable(drawable);
+        recyclerView.addItemDecoration(dividerItemDecoration);
+        ArrayList<DataSchedule> arrayList = getNearLocationList(Config.URL_GET_TASK_LIST + "/" + userId);
+        AdapterSchedule adapterSchedule = new AdapterSchedule(arrayList, getApplicationContext());
+        recyclerView.setAdapter(adapterSchedule);
+    }
+
+    public ArrayList<DataSchedule> getNearLocationList(String url) {
+
+        ArrayList<String> arrayList;
+        ArrayList<DataSchedule> services = new ArrayList<>();
+
+        try {
+            JSONArray jsonArray = new JSONArray(new HttpRequestAdapter.httpGet().execute(Config.URL_HOST + url).get());
+
+            for (int i = 0; i < jsonArray.length(); i += 2) {
+
+                DataSchedule dataSchedule = new DataSchedule();
+                JSONObject jsonObjectData = jsonArray.getJSONObject(i);
+
+
+                arrayList = parseJson(jsonObjectData, Config.GET_KEY_JSON_TASK_LIST);
+
+                //Set hình ảnh
+//                    dataSchedule.setImage(setImage(Config.URL_HOST + Config.URL_GET_THUMB + arrayList.get(3),
+//                            arrayList.get(2), arrayList.get(3)));
+                //Set mã
+                dataSchedule.setId(Integer.parseInt(arrayList.get(0)));
+                //Set ngày giao việc
+                dataSchedule.setDate(arrayList.get(1));
+                // set tên công việc
+                dataSchedule.setName(arrayList.get(2));
+                // set người giao việc
+                dataSchedule.setUser(arrayList.get(3));
+
+                services.add(dataSchedule);
+            }
+        } catch (JSONException | InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        return services;
     }
 }
