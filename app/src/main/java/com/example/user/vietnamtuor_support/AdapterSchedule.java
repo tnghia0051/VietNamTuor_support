@@ -1,6 +1,8 @@
 package com.example.user.vietnamtuor_support;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,8 +36,17 @@ public  class AdapterSchedule extends RecyclerView.Adapter<AdapterSchedule.ViewH
         holder.txtName.setText(dataSchedules.get(position).getName());
         holder.txtUser.setText(dataSchedules.get(position).getUser());
         holder.txtDate.setText(dataSchedules.get(position).getDate());
-        holder.imgMain.setImageResource(dataSchedules.get(position).getImage());
-
+        holder.imgMain.setImageBitmap(dataSchedules.get(position).getImage());
+        holder.cardView.setTag(dataSchedules.get(position).getId());
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent iServiceInfo = new Intent(context, Activity_schedule_main.class);
+                iServiceInfo.putExtra("id", (int) view.getTag());
+                iServiceInfo.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(iServiceInfo);
+            }
+        });
     }
 
     @Override
@@ -48,12 +59,14 @@ public  class AdapterSchedule extends RecyclerView.Adapter<AdapterSchedule.ViewH
         TextView txtDate;
         TextView txtUser;
         ImageView imgMain;
+        CardView cardView;
         public ViewHolder(View itemView) {
             super(itemView);
-            imgMain = (ImageView)itemView.findViewById(R.id.imageScheduleType);
-            txtName = (TextView)itemView.findViewById(R.id.textViewScheduleContent);
-            txtUser = (TextView)itemView.findViewById(R.id.textViewUserRequest);
-            txtDate = (TextView)itemView.findViewById(R.id.textViewScheduleDate);
+            imgMain = itemView.findViewById(R.id.imageScheduleType);
+            txtName = itemView.findViewById(R.id.textViewScheduleContent);
+            txtUser = itemView.findViewById(R.id.textViewUserRequest);
+            txtDate = itemView.findViewById(R.id.textViewScheduleDate);
+            cardView = itemView.findViewById(R.id.cardViewSuKien);
         }
     }
 }

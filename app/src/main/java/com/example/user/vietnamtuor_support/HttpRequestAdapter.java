@@ -30,6 +30,7 @@ public class HttpRequestAdapter {
                 urlConnection = (HttpURLConnection) obj.openConnection();
                 urlConnection.setDoInput(true);
                 urlConnection.setRequestMethod("GET");
+                urlConnection.connect();
                 InputStream in = new BufferedInputStream(urlConnection.getInputStream());
                 BufferedReader reader = new BufferedReader(new InputStreamReader(in));
                 String line;
@@ -39,7 +40,9 @@ public class HttpRequestAdapter {
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {
-                urlConnection.disconnect();
+                if (urlConnection != null) {
+                    urlConnection.disconnect();
+                }
             }
             return result.toString();
         }

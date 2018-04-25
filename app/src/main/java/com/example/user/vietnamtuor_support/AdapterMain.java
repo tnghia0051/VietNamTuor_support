@@ -36,7 +36,7 @@ public class AdapterMain extends RecyclerView.Adapter<AdapterMain.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, int position) {
         DataMain dataMain = dataMains.get(position);
         holder.txtName.setText(dataMain.getName());
-        holder.imgMain.setImageResource(dataMain.getImage());
+        holder.imgMain.setImageBitmap(dataMain.getImage());
         holder.cardView.setTag(dataMain.getId());
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
@@ -64,8 +64,8 @@ public class AdapterMain extends RecyclerView.Adapter<AdapterMain.ViewHolder> {
 
         public ViewHolder(View itemView) {
             super(itemView);
-            txtName = (TextView) itemView.findViewById(R.id.txtMainName);
-            imgMain = (ImageView) itemView.findViewById(R.id.imgMainPhoto);
+            txtName = itemView.findViewById(R.id.txtMainName);
+            imgMain = itemView.findViewById(R.id.imgMainPhoto);
             cardView = itemView.findViewById(R.id.cardViewMain);
         }
     }

@@ -14,7 +14,7 @@ import static com.example.user.vietnamtuor_support.MainActivity.menuBotNavBar;
 
 public class Activity_user extends AppCompatActivity {
 
-    public static int userId = 0;
+    public static int userId = 1;
     public static String userName, userType;
     public static Bitmap avatar;
     Button btnAddPlace, btnAddservice, btnSearch, Logout;
@@ -34,9 +34,6 @@ public class Activity_user extends AppCompatActivity {
         btnAddservice = findViewById(R.id.btnAddService);
         btnSearch = findViewById(R.id.btnAdvancedSearch);
         Logout = findViewById(R.id.buttonLogout);
-
-        sessionManager = new SessionManager(getApplicationContext());
-        sessionManager.checkLogin();
 
         txtUserName.setText(userName);
         txtUserType.setText(userType);
@@ -68,6 +65,7 @@ public class Activity_user extends AppCompatActivity {
         Logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                sessionManager = new SessionManager(getApplicationContext());
                 userId = 0;
                 userName = null;
                 userType = null;
