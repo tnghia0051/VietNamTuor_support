@@ -1,7 +1,6 @@
-package com.example.user.vietnamtuor_support;
+package com.example.user.vietnamtuor_support.Adapter;
 
 import android.content.Context;
-import android.support.v7.view.menu.MenuView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.lang.reflect.Array;
+import com.example.user.vietnamtuor_support.Model.ObjectClass.DataNotification;
+import com.example.user.vietnamtuor_support.R;
+
 import java.util.ArrayList;
 /**
  * Created by User on 15/04/2018.

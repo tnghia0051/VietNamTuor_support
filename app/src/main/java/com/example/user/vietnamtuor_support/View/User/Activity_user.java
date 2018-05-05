@@ -1,4 +1,4 @@
-package com.example.user.vietnamtuor_support;
+package com.example.user.vietnamtuor_support.View.User;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -8,9 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.user.vietnamtuor_support.View.Main.Activity_search;
+import com.example.user.vietnamtuor_support.R;
+import com.example.user.vietnamtuor_support.Model.SessionManager;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
-import static com.example.user.vietnamtuor_support.MainActivity.menuBotNavBar;
+import static com.example.user.vietnamtuor_support.View.Main.MainActivity.menuBotNavBar;
 
 public class Activity_user extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.user.vietnamtuor_support;
+package com.example.user.vietnamtuor_support.View.Notification;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -9,9 +9,13 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.example.user.vietnamtuor_support.Adapter.AdapterNotification;
+import com.example.user.vietnamtuor_support.Model.ObjectClass.DataNotification;
+import com.example.user.vietnamtuor_support.R;
+
 import java.util.ArrayList;
 
-import static com.example.user.vietnamtuor_support.MainActivity.menuBotNavBar;
+import static com.example.user.vietnamtuor_support.View.Main.MainActivity.menuBotNavBar;
 
 
 public class Activity_notification extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.user.vietnamtuor_support;
+package com.example.user.vietnamtuor_support.Model;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,10 +11,10 @@ import android.util.Base64;
 import java.io.ByteArrayOutputStream;
 import java.util.HashMap;
 
-import static com.example.user.vietnamtuor_support.Activity_user.avatar;
-import static com.example.user.vietnamtuor_support.Activity_user.userId;
-import static com.example.user.vietnamtuor_support.Activity_user.userName;
-import static com.example.user.vietnamtuor_support.Activity_user.userType;
+import static com.example.user.vietnamtuor_support.View.User.Activity_user.avatar;
+import static com.example.user.vietnamtuor_support.View.User.Activity_user.userId;
+import static com.example.user.vietnamtuor_support.View.User.Activity_user.userName;
+import static com.example.user.vietnamtuor_support.View.User.Activity_user.userType;
 
 /**
  * Created by sieut on 4/14/2018.

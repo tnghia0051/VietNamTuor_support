@@ -1,4 +1,4 @@
-package com.example.user.vietnamtuor_support;
+package com.example.user.vietnamtuor_support.Adapter;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

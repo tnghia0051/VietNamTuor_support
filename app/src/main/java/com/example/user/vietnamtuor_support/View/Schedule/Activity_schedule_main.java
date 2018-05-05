@@ -1,4 +1,4 @@
-package com.example.user.vietnamtuor_support;
+package com.example.user.vietnamtuor_support.View.Schedule;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -11,9 +11,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.user.vietnamtuor_support.Adapter.AdapterSchedule;
+import com.example.user.vietnamtuor_support.Model.ObjectClass.DataSchedule;
+import com.example.user.vietnamtuor_support.R;
+import com.example.user.vietnamtuor_support.View.User.Activity_addservice;
+
 import java.util.ArrayList;
 
-import static com.example.user.vietnamtuor_support.MainActivity.menuBotNavBar;
+import static com.example.user.vietnamtuor_support.View.Main.MainActivity.menuBotNavBar;
 
 /**
  * Created by User on 25/04/2018.

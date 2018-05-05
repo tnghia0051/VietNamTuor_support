@@ -9,22 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".View.Main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity_Login" />
-        <activity android:name=".Activity_addlocation" />
-        <activity android:name=".Activity_addservice" />
-        <activity android:name=".Activity_search" />
-        <activity android:name=".Activity_schedule" />
-        <activity android:name=".Activity_notification"/>
-        <activity android:name=".Activity_user" />
-        <activity android:name=".Activity_serviceinfo" />
-        <activity android:name=".Activity_schedule_main"/>
-        <activity android:name=".Activity_schedule_exist"/>
+        <activity android:name=".View.User.Activity_Login" />
+        <activity android:name=".View.User.Activity_addlocation" />
+        <activity android:name=".View.User.Activity_addservice" />
+        <activity android:name=".View.Main.Activity_search" />
+        <activity android:name=".View.Schedule.Activity_schedule" />
+        <activity android:name=".View.Notification.Activity_notification"/>
+        <activity android:name=".View.User.Activity_user" />
+        <activity android:name=".View.Main.Activity_serviceinfo" />
+        <activity android:name=".View.Schedule.Activity_schedule_main"/>
+        <activity android:name=".View.Schedule.Activity_schedule_exist"/>
     </application>
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.user.vietnamtuor_support;
+package com.example.user.vietnamtuor_support.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.user.vietnamtuor_support.View.Schedule.Activity_schedule_main;
+import com.example.user.vietnamtuor_support.Model.ObjectClass.DataSchedule;
+import com.example.user.vietnamtuor_support.R;
 
 import java.util.ArrayList;
 

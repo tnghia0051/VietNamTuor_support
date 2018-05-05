@@ -1,4 +1,4 @@
-package com.example.user.vietnamtuor_support;
+package com.example.user.vietnamtuor_support.Model.ObjectClass;
 
 import android.graphics.Bitmap;
 

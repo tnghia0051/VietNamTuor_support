@@ -1,10 +1,11 @@
-package com.example.user.vietnamtuor_support;
+package com.example.user.vietnamtuor_support.Model;
 
-import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
-import com.example.user.vietnamtuor_support.HttpRequestAdapter.httpGetImage;
+
+import com.example.user.vietnamtuor_support.Config;
+import com.example.user.vietnamtuor_support.Adapter.HttpRequestAdapter.httpGetImage;
 
 import java.io.File;
 import java.io.FileOutputStream;

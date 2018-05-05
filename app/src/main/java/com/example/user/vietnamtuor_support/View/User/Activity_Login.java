@@ -1,4 +1,4 @@
-package com.example.user.vietnamtuor_support;
+package com.example.user.vietnamtuor_support.View.User;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,18 +9,24 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.user.vietnamtuor_support.Adapter.HttpRequestAdapter;
+import com.example.user.vietnamtuor_support.Config;
+import com.example.user.vietnamtuor_support.Helper.JsonHelper;
+import com.example.user.vietnamtuor_support.R;
+import com.example.user.vietnamtuor_support.Model.SessionManager;
+import com.example.user.vietnamtuor_support.View.Main.MainActivity;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
-import static com.example.user.vietnamtuor_support.Activity_user.avatar;
-import static com.example.user.vietnamtuor_support.Activity_user.userId;
-import static com.example.user.vietnamtuor_support.Activity_user.userName;
-import static com.example.user.vietnamtuor_support.Activity_user.userType;
-import static com.example.user.vietnamtuor_support.MainActivity.menuBotNavBar;
-import static com.example.user.vietnamtuor_support.ModelService.setImage;
+import static com.example.user.vietnamtuor_support.View.User.Activity_user.avatar;
+import static com.example.user.vietnamtuor_support.View.User.Activity_user.userId;
+import static com.example.user.vietnamtuor_support.View.User.Activity_user.userName;
+import static com.example.user.vietnamtuor_support.View.User.Activity_user.userType;
+import static com.example.user.vietnamtuor_support.Model.ModelService.setImage;
 
 /**
  * Created by zzacn on 12/7/2017.

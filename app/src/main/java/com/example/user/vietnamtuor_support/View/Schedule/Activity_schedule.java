@@ -1,4 +1,4 @@
-package com.example.user.vietnamtuor_support;
+package com.example.user.vietnamtuor_support.View.Schedule;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,6 +11,12 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.example.user.vietnamtuor_support.Adapter.AdapterSchedule;
+import com.example.user.vietnamtuor_support.Adapter.HttpRequestAdapter;
+import com.example.user.vietnamtuor_support.Config;
+import com.example.user.vietnamtuor_support.Model.ObjectClass.DataSchedule;
+import com.example.user.vietnamtuor_support.R;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -20,9 +26,9 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
-import static com.example.user.vietnamtuor_support.Activity_user.userId;
-import static com.example.user.vietnamtuor_support.JsonHelper.parseJson;
-import static com.example.user.vietnamtuor_support.MainActivity.menuBotNavBar;
+import static com.example.user.vietnamtuor_support.View.User.Activity_user.userId;
+import static com.example.user.vietnamtuor_support.Helper.JsonHelper.parseJson;
+import static com.example.user.vietnamtuor_support.View.Main.MainActivity.menuBotNavBar;
 
 public class Activity_schedule extends AppCompatActivity {
 

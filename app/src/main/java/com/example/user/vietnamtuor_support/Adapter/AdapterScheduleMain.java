@@ -1,9 +1,6 @@
-package com.example.user.vietnamtuor_support;
+package com.example.user.vietnamtuor_support.Adapter;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-
-import static com.example.user.vietnamtuor_support.MainActivity.menuBotNavBar;
 
 /**
  * Created by User on 25/04/2018.

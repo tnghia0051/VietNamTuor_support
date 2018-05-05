@@ -1,4 +1,4 @@
-package com.example.user.vietnamtuor_support;
+package com.example.user.vietnamtuor_support.View.Main;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -17,6 +17,17 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.user.vietnamtuor_support.View.Notification.Activity_notification;
+import com.example.user.vietnamtuor_support.View.Schedule.Activity_schedule;
+import com.example.user.vietnamtuor_support.View.User.Activity_user;
+import com.example.user.vietnamtuor_support.Adapter.AdapterMain;
+import com.example.user.vietnamtuor_support.Adapter.HttpRequestAdapter;
+import com.example.user.vietnamtuor_support.Config;
+import com.example.user.vietnamtuor_support.Helper.BottomNavigationViewHelper;
+import com.example.user.vietnamtuor_support.Model.ObjectClass.DataMain;
+import com.example.user.vietnamtuor_support.R;
+import com.example.user.vietnamtuor_support.Model.SessionManager;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -26,8 +37,8 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
-import static com.example.user.vietnamtuor_support.JsonHelper.parseJson;
-import static com.example.user.vietnamtuor_support.JsonHelper.parseJsonNoId;
+import static com.example.user.vietnamtuor_support.Helper.JsonHelper.parseJson;
+import static com.example.user.vietnamtuor_support.Helper.JsonHelper.parseJsonNoId;
 
 
 public class MainActivity extends AppCompatActivity {

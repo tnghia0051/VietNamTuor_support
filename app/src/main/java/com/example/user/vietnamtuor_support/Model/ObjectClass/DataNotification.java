@@ -1,4 +1,4 @@
-package com.example.user.vietnamtuor_support;
+package com.example.user.vietnamtuor_support.Model.ObjectClass;
 
 /**
  * Created by User on 15/04/2018.
