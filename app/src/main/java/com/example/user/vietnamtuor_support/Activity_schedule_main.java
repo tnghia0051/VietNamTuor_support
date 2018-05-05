@@ -17,10 +17,11 @@ import static com.example.user.vietnamtuor_support.MainActivity.menuBotNavBar;
  */
 
 public class Activity_schedule_main extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_schedule);
+        setContentView(R.layout.activity_schedule_main);
         //initView();
         menuBotNavBar(this, 2);
     }
