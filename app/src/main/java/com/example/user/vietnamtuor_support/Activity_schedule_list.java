@@ -16,7 +16,7 @@ import static com.example.user.vietnamtuor_support.MainActivity.menuBotNavBar;
  * Created by User on 22/04/2018.
  */
 
-public class Activity_scheduleExist extends AppCompatActivity {
+public class Activity_schedule_list extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
