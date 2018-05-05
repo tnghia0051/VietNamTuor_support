@@ -13,6 +13,7 @@ public class DataSchedule {
     private String name;
     private String user;
     private String date;
+    private String address;
 
     public DataSchedule() {
     }
@@ -57,5 +58,12 @@ public class DataSchedule {
         this.user = user;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 }
 

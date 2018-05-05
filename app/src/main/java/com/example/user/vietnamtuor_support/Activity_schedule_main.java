@@ -59,12 +59,14 @@ public class Activity_schedule_main extends AppCompatActivity {
     public void initView(){
         RecyclerView recyclerView = (RecyclerView)findViewById(R.id.RecyclerView_Schedule_ServiceDone);
         recyclerView.setHasFixedSize(true);
+
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),DividerItemDecoration.VERTICAL);
         Drawable drawable = ContextCompat.getDrawable(getApplicationContext(),R.drawable.custom_divider);
         dividerItemDecoration.setDrawable(drawable);
         recyclerView.addItemDecoration(dividerItemDecoration);
+
         ArrayList<DataSchedule> arrayList = new ArrayList<>();
         AdapterSchedule adapterSchedule = new AdapterSchedule(arrayList,getApplicationContext());
         recyclerView.setAdapter(adapterSchedule);

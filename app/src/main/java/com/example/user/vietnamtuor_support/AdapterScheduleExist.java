@@ -15,11 +15,11 @@ import java.util.ArrayList;
  */
 
 public  class AdapterScheduleExist extends RecyclerView.Adapter<AdapterScheduleExist.ViewHolder>{
-    ArrayList<DataScheduleExist> dataSchedulesExists;
+    ArrayList<DataSchedule> dataSchedules;
     Context context;
 
-    public AdapterScheduleExist(ArrayList<DataScheduleExist> dataNotifications, Context context){
-        this.dataSchedulesExists = dataSchedulesExists;
+    public AdapterScheduleExist(ArrayList<DataSchedule> dataNotifications, Context context){
+        this.dataSchedules = dataSchedules;
         this.context = context;
     }
     @Override
@@ -31,25 +31,27 @@ public  class AdapterScheduleExist extends RecyclerView.Adapter<AdapterScheduleE
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.txtName.setText(dataSchedulesExists.get(position).getName());
-        holder.txtAddress.setText(dataSchedulesExists.get(position).getAddress());
-        holder.imgService.setImageResource(dataSchedulesExists.get(position).getImage());
+        holder.txtName.setText(dataSchedules.get(position).getName());
+        holder.txtAddress.setText(dataSchedules.get(position).getAddress());
+        holder.imgService.setImageBitmap(dataSchedules.get(position).getImage());
+        holder.txtDateCreated.setText(dataSchedules.get(position).getDate());
     }
 
     @Override
     public int getItemCount() {
-        return dataSchedulesExists.size();
+        return dataSchedules.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView txtAddress;
-        TextView txtName;
+        TextView txtName, txtDateCreated;
         ImageView imgService;
         public ViewHolder(View itemView) {
             super(itemView);
             imgService = (ImageView)itemView.findViewById(R.id.imageServiceExist);
             txtName = (TextView)itemView.findViewById(R.id.textViewServiceName);
             txtAddress = (TextView)itemView.findViewById(R.id.textViewServiceAddress);
+            txtDateCreated = itemView.findViewById(R.id.textViewExistDateDate);
         }
     }
 }
