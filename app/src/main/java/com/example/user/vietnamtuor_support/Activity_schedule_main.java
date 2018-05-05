@@ -1,5 +1,6 @@
 package com.example.user.vietnamtuor_support;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -7,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -17,17 +20,31 @@ import static com.example.user.vietnamtuor_support.MainActivity.menuBotNavBar;
  */
 
 public class Activity_schedule_main extends AppCompatActivity {
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule_main);
         //initView();
-        menuBotNavBar(this, 2);
+        menuBotNavBar(this, 1);
+
+        button = findViewById(R.id.btnExistLocation);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Existlocation();
+
+            }
+        });
+    }
+    public void Existlocation(){
+        Intent intent = new Intent(this, Activity_schedule_exist.class);
+        startActivity(intent);
     }
 
     public void initView(){
-        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.RecyclerView_ExistSchedule);
+        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.RecyclerView_Schedule_ServiceDone);
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);

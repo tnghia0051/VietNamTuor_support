@@ -23,7 +23,7 @@
         <activity android:name=".Activity_schedule" />
         <activity android:name=".Activity_notification"/>
         <activity android:name=".Activity_user" />
-        <activity android:name=".Activity_serviceinfo"/>
-        <activity android:name=".Activity_schedule_list"/>
+        <activity android:name=".Activity_serviceinfo" />
+        <activity android:name=".Activity_schedule_main"/>
     </application>
 </manifest>
