@@ -25,5 +25,6 @@
         <activity android:name=".Activity_user" />
         <activity android:name=".Activity_serviceinfo" />
         <activity android:name=".Activity_schedule_main"/>
+        <activity android:name=".Activity_schedule_exist"/>
     </application>
 </manifest>

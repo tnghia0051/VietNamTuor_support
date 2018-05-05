@@ -28,26 +28,26 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/textViewTaskContent"
                     android:textSize="20dp"
-                    android:text="Noi dung cong viec"/>
+                    android:text="Nội dung công việc"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textViewTaskGiver"
                     android:textSize="20dp"
-                    android:text="Nguoi giao"/>
+                    android:text="Người giao task:"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:id="@+id/textViewTaskDate"
-                    android:text="Thoi gian: 1/1/2018 - 2/1/2018"/>
+                    android:text="Thời gian: 1/1/2018 - 2/1/2018"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textViewTaskExcept"
                     android:textSize="20dp"
-                    android:text="Ngay nhan:"/>
+                    android:text="Ngay nhận task:"/>
 
             </LinearLayout>
 
@@ -142,7 +142,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Địa điểm đã thêm vào"
+                        android:text="Dịch vụ đã thêm:"
                         android:textColor="@color/colorBlack"
                         android:textSize="16sp" />
 

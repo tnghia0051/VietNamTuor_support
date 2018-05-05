@@ -14,7 +14,7 @@ public class Activity_schedule_exist extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_schedule);
+        setContentView(R.layout.activity_schedule_exist);
         menuBotNavBar(this, 1);
     }
 }
