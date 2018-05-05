@@ -21,6 +21,7 @@ import static com.example.user.vietnamtuor_support.MainActivity.menuBotNavBar;
 
 public class Activity_schedule_main extends AppCompatActivity {
     private Button button;
+    private Button button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +38,21 @@ public class Activity_schedule_main extends AppCompatActivity {
 
             }
         });
+        button2 = findViewById(R.id.btnScheduleAdd);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Addlocation();
+
+            }
+        });
     }
     public void Existlocation(){
         Intent intent = new Intent(this, Activity_schedule_exist.class);
+        startActivity(intent);
+    }
+    public void Addlocation(){
+        Intent intent = new Intent(this, Activity_addservice.class);
         startActivity(intent);
     }
 
