@@ -97,7 +97,7 @@
                 </LinearLayout>
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/RecyclerView_Place"
+                    android:id="@+id/RecyclerView_Schedule_Place"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
 
@@ -145,7 +145,7 @@
                 </LinearLayout>
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/RecyclerView_Eat"
+                    android:id="@+id/RecyclerView_Schedule_Eat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
 
@@ -192,7 +192,7 @@
                 </LinearLayout>
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/RecyclerView_Hotel"
+                    android:id="@+id/RecyclerView_Schedule_Hotel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
 
@@ -240,7 +240,7 @@
                 </LinearLayout>
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/RecyclerView_Entertain"
+                    android:id="@+id/RecyclerView_Schedule_Entertain"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
 
@@ -288,7 +288,7 @@
                 </LinearLayout>
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/RecyclerView_Vehicle"
+                    android:id="@+id/RecyclerView_Schedule_Vehicle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
 

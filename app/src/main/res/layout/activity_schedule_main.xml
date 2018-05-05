@@ -149,7 +149,7 @@
                 </LinearLayout>
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/RecyclerView_ExistSchedule"
+                    android:id="@+id/RecyclerView_Schedule_ServiceDone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
 
